@@ -1,0 +1,423 @@
+/*!
+ * bootScore custom styles
+ */
+
+// Add your own code here!
+// Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
+// Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
+
+/*-----------------------------------------------------------------------------
+
+  ATTENTION! This is the parent-theme's file. Your work will be lost by the 
+  next update!
+
+  Wouldn't you prefer to use one of our child themes and be update-safe?
+
+  bootscore-child: 
+  https://github.com/bootscore/bootscore-child/archive/refs/heads/main.zip
+
+  bootcommerce-child:
+  https://github.com/bootscore/bootcommerce-child/archive/refs/heads/main.zip
+
+-----------------------------------------------------------------------------*/
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+.site-header {
+  ul li a{
+    color: #fff;
+  }
+}
+.navbar-nav .show>.nav-link, .navbar-nav .nav-link.active{
+  color: #fff;
+}
+.navbar-brand{
+  @media only screen and (max-width: 768px) {
+    max-width: 70px;
+   }
+  }
+
+.head_main {
+  border-bottom: 2px solid $primary-maroon;
+  font-family: $font-poppins;
+  background:#000;
+  opacity: 1;
+}
+#nav-main.fixed{
+  @media only screen and (min-width: 768px) {
+    height: 55px;
+   }
+
+}
+#nav-main{
+  transition: all 0.4s;
+
+  .logo_mobile {
+    img{
+      max-width: 30px;
+    }
+    @media only screen and (min-width: 768px) {
+      padding-left: 5.882rem;
+      padding-right: 5.882rem;
+      img{
+        max-width: 70px;
+        margin-top: -15px;
+      }
+    }
+  }
+  height: 121px;
+  ul{
+    li{
+      padding-left: 5.882rem;
+      a{
+        transition: all 0.4s;
+        margin-top: 0;
+        border-bottom: 0;
+        line-height: 24px;
+        font-size: 13px;
+        font-family: $font-poppins;
+      }
+      a:hover{
+        margin-top: -10px;
+        padding-bottom: 20px;
+        color: #fff;
+        border-bottom: 2px solid $primary-maroon;
+      }
+      a:focus{
+        color: #fff;
+      }
+    }
+    li:first-child{
+      padding-left: 0;
+    }
+  }
+}
+#page {
+  padding-top:121px;
+}
+.hero{
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  &__slide {
+    text-align: left;
+    align-items: flex-start;
+    &__title{
+      font-family: $font-poppins;
+      padding-left: 8.235rem;
+      color: #fff;
+      padding-top: 18%;
+      @media only screen and (max-width: 768px) {
+          padding-left: 6.235rem;
+          padding-top: 52%;
+        }
+      h2{
+        font-size: 2.059rem;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      p{
+        max-width:360px;
+        font-size: 1rem;
+        line-height: 1.765rem;
+        margin-top: 0;
+        margin-bottom: 28px;
+      }
+    }
+  }
+  &__socials{
+    position: absolute;
+    bottom: 1rem;
+    color: #fff;
+    left: 3rem;
+    z-index: 1;
+    @media only screen and (max-width: 768px) {
+      bottom: 3rem;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      text-align: center;
+      margin-right: auto;
+    }
+    ul {
+      padding-left: 0;
+      margin-left: 0;
+      list-style: none;
+    }
+    li {
+      display: inline;
+      padding-left: 2.118rem;
+    &:first-child{
+      padding-left: 0;
+    }
+    a {
+      color: #fff;
+      transition: all 0.4s;
+      &:hover{
+        color: $primary-maroon;
+      }
+    }
+    }
+
+  }
+  &__down{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    text-align: center;
+    width: fit-content;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  .swiper-pagination-bullet{
+    opacity: 1;
+    background:transparent;
+    border: 1px solid #fff;
+  }
+  .swiper-pagination-bullet-active{
+    background:#fff;
+  }
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
+  left: 43px;
+}
+
+.button_default {
+  width:132px;
+  height: 42px;
+  text-align: center;
+  color: #fff;
+  background: transparent;
+  border: 1px solid $primary-maroon;
+  font-size: 1rem;
+  padding-top: 7px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.4s;
+  &:hover{
+    font-size: 0.8rem;
+    padding-top: 9px;
+    color: #fff;
+  }
+}
+
+.button_dark {
+  width:160px;
+  height: 42px;
+  text-align: center;
+  color: #000;
+  background: transparent;
+  border: 1px solid $primary-maroon;
+  font-size: 1rem;
+  padding-top: 7px;
+  text-decoration: none;
+  font-weight: 400;
+  display: block;
+  margin:-2rem auto;
+  transition: all 0.4s;
+  &:hover{
+    font-size: 0.8rem;
+    padding-top: 9px;
+    color: #000;
+  }
+}
+
+.button_small {
+  width:90px;
+  height: 29px;
+  text-align: center;
+  color: #fff;
+  background: $primary-maroon;
+  font-size: 0.8rem;
+  margin:0 auto;
+  padding-top: 5px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.4s;
+  &:hover{
+    background: $maroon-dark;
+    color: #fff;
+  }
+}
+
+section{
+  padding-top: 4.588rem;
+  padding-bottom: 3.765rem;
+}
+.section_title{
+  font-size: 2.059rem;
+  color: $primary-maroon;
+  font-family: $font-lato;
+  font-weight: 900;
+}
+
+.news {
+  &__posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    margin-top: 1.765rem;
+  }
+  &__card{
+    width: calc(100% * (1/4) - 17px);
+    border-left: 2px solid $grey;
+    border-right: 2px solid $grey;
+    position: relative;
+    border-top: 2px solid $grey;
+    font-size: 0.765rem;
+    font-family: $font-poppins;
+    margin-bottom: 3rem;
+    @media only screen and (max-width: 768px) {
+     width:100%;
+     }
+    
+     &::after{
+      content: "";
+      width: 51.5%;
+      height: 2px;
+      background-color: #DADADA;
+      position: absolute;
+      bottom: -14px;
+      left: -3px;
+      transform: rotate(12deg);
+    }
+    &::before{
+      content: "";
+      width: 52.5%;
+      height: 2px;
+      background-color: #DADADA;
+      position: absolute;
+      bottom: -14px;
+      right: -3px;
+      transform: rotate(168deg);
+    }
+    &__content{
+      padding: 1rem 1.824rem;
+    }
+    &__excerpt {
+      font-weight: 400;
+      strong{
+        font-weight: 600;
+      }
+    }
+  }
+ 
+}
+
+
+.samochody {
+  &__posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    margin-top: 1.765rem;
+  }
+
+}
+
+.loadmore{
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+}
+
+#popup {
+  max-width: 461px;
+  width: 80%;
+  padding: 2.353rem;
+  position: relative;
+  background: #fff;
+  margin: 12% auto;
+  font-family: $font-poppins;
+  label{
+    width:100%;
+    font-size: 0.824rem;
+    color:  $primary-black;
+   
+  }
+  input {
+    width: 100%;
+    border: 1px solid $primary-maroon;
+    height: 29px;
+  }
+  input[type="submit"]{
+    background-color: $primary-maroon;
+    width:210px;
+    text-align: center;
+    height: 39px;
+    color: #fff;
+    display: block;
+    margin: 1.882rem auto 0;
+
+  }
+  .wpcf7 form .wpcf7-response-output{
+    margin:0;
+    font-size: 10px;
+  }
+  .form_row{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    &__two_blocks {
+      max-width: 48%;
+    }
+    &__acceptance{
+      font-size: 10px;
+    }
+  }
+
+}
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #000;
+}
+
+
+
+@media only screen and (min-width: 1120px) {
+  .container{
+    max-width: 1131px;
+  }
+
+  }
+
+  
+  @media only screen and (max-width: 990px) {
+    .offcanvas-header{
+      background-color: #fff !important;
+    }
+    }
+
+@media only screen and (min-width: 768px) {
+.logo_desktop{
+  display: none;
+}
+
+}
+
+
